@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/colorRecCardBackground"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/playPauseBttn"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Title"
+                android:textColor="@color/colorCardText"
+                android:textSize="17sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/cardDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/playPauseBttn"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/cardTitle"
+                android:text="Date"
+                android:textColor="@color/colorCardTextLight"
+                android:textSize="13sp"
+                android:textStyle="italic"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/cardDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/cardTitle"
+                android:layout_alignParentEnd="true"
+                android:text="Duration"
+                android:textColor="@color/colorCardText"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RelativeOverlap"
+                android:textAlignment="viewStart"
+                android:layout_gravity="right" />
+
+            <TextView
+                android:id="@+id/cardSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardDuration"
+                android:text="Size"
+                android:textColor="@color/colorCardTextLight"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                tools:ignore="HardcodedText"
+                android:textAlignment="viewEnd"
+                android:layout_gravity="right"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:id="@+id/playPauseBttn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="false"
+                android:background="#00ffffff"
+                android:contentDescription="@string/record"
+                android:src="@drawable/ic_play_arrow_white_48dp"
+                android:tint="@color/colorRecControls"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/seekBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:measureWithLargestChild="false"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/currentDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0:00"
+                    android:textColor="@color/colorCardText"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:filterTouchesWhenObscured="true"
+                    android:max="100"
+                    android:progress="50"
+                    android:progressTint="@color/colorPrimary"
+                    android:thumbTint="@color/colorRecControls"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardOptionsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:measureWithLargestChild="false"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/cardDelete"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="6dp"
+                    android:background="#00ffffff"
+                    android:clickable="false"
+                    android:contentDescription="@string/delete"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_delete_forever_white_48dp"
+                    android:tint="@color/colorRecControls"
+                    android:filterTouchesWhenObscured="true" />
+
+                <ImageButton
+                    android:id="@+id/cardRename"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="6dp"
+                    android:background="#00ffffff"
+                    android:contentDescription="@string/rename"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_edit_white_48dp"
+                    android:tint="@color/colorRecControls"
+                    android:filterTouchesWhenObscured="true" />
+
+                <ImageButton
+                    android:id="@+id/cardShare"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="6dp"
+                    android:background="#00ffffff"
+                    android:contentDescription="@string/share"
+                    android:focusableInTouchMode="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_share_white_48dp"
+                    android:tint="@color/colorRecControls" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

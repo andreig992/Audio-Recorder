@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Main theme colors -->
+        <!--   your app branding color for the app bar -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorSettingsBackground</item>
+        <item name="colorControlHighlight">@color/colorControlsCardBackground</item>
+
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:colorBackground">@color/colorRecCardBackground</item>
+        <item name="android:textColor">@color/colorRecControls</item>
+        <item name="android:textColorPrimary">@color/colorCardText</item>
+    </style>
+
+
+</resources>

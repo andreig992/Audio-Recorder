@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/colorRecCardBackground"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            android:background="@color/colorRecCardBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:background="@drawable/button_drawable">
+
+                <EditText
+                    android:id="@+id/customRecordingName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/recordingName"
+                    android:inputType="textNoSuggestions"
+                    android:lines="1"
+                    android:maxLength="35"
+                    android:maxLines="1"
+                    android:textAlignment="center"
+                    android:textSize="15sp"
+                    android:textColorLink="@color/colorControlsCardBackground"
+                    android:textColorHighlight="@color/colorControlsCardBackground"
+                    android:textColorHint="@color/colorControlsCardBackground"
+                    android:textColor="@color/colorControls"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true" />
+
+                <Button
+                    android:text="Saving Location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/saveLocationBttn"
+                    android:textColor="@color/colorControls"
+                    android:textColorHighlight="@color/colorControls"
+                    android:textColorHint="@color/colorControls"
+                    android:textColorLink="@color/colorControls"
+                    android:background="@drawable/button_drawable"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/colorRecCardBackground"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            android:background="@color/colorRecCardBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:background="@drawable/button_drawable">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sampling Rate"
+                    android:textColor="@color/colorControlsCardBackground"
+                    android:textSize="13sp"
+                    android:layout_centerInParent="false"
+                    android:shadowColor="@color/colorControlsCardBackground" />
+
+                <TextView
+                    android:id="@+id/sampleRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SampleRate Hz"
+                    android:textColor="@color/colorControlsCardBackground"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText"
+                    android:layout_centerInParent="false"
+                    android:textAlignment="center"
+                    android:shadowColor="@color/colorControlsCardBackground" />
+                <TextView
+                    android:id="@+id/isSampleRateSupported"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NOT SUPPORTED"
+                    android:textColor="@color/colorControls"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText"
+                    android:layout_centerInParent="false"
+                    android:textAlignment="center"
+                    android:shadowColor="@color/colorControls"
+                    android:textStyle="normal|bold" />
+
+                <SeekBar
+                    android:id="@+id/sampleRateBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:filterTouchesWhenObscured="true"
+                    android:max="6"
+                    android:progress="5"
+                    android:progressTint="@color/colorControlsCardBackground"
+                    android:thumbTint="@color/colorControls"
+                    android:visibility="visible"
+                    android:layout_centerInParent="false"
+                    android:layout_marginTop="5dp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Encoding Bit-Rate"
+                    android:textColor="@color/colorControlsCardBackground"
+                    android:textSize="13sp"
+                    android:layout_centerInParent="false"
+                    android:shadowColor="@color/colorControlsCardBackground" />
+
+                <TextView
+                    android:id="@+id/audioEncodingBitRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BitRate kbps"
+                    android:textColor="@color/colorControlsCardBackground"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText"
+                    android:layout_centerInParent="false"
+                    android:textAlignment="center"
+                    android:shadowColor="@color/colorControlsCardBackground" />
+
+                <SeekBar
+                    android:id="@+id/audioEncodingBitRateBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:filterTouchesWhenObscured="true"
+                    android:max="1536000"
+                    android:progress="512000"
+                    android:progressTint="@color/colorControlsCardBackground"
+                    android:thumbTint="@color/colorControls"
+                    android:visibility="visible"
+                    android:layout_centerInParent="false"
+                    android:layout_marginTop="5dp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+
+                <Button
+                    android:text="Audio Encoder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/encoderButton"
+                    android:textColor="@color/colorControls"
+                    android:textColorHighlight="@color/colorControls"
+                    android:textColorHint="@color/colorControls"
+                    android:textColorLink="@color/colorControls"
+                    android:background="@drawable/button_drawable"
+                    android:foreground="?android:attr/selectableItemBackground" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <Button
+                        android:text="MONO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/monoButton"
+                        android:textColor="@color/colorControls"
+                        android:textColorHighlight="@color/colorControls"
+                        android:textColorHint="@color/colorControls"
+                        android:textColorLink="@color/colorControls"
+                        android:background="@drawable/button_drawable"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="false"
+                        android:layout_marginRight="22dp"
+                        android:layout_marginLeft="22dp"
+                        android:foreground="?android:attr/selectableItemBackground" />
+
+                    <Button
+                        android:text="STEREO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/stereoButton"
+                        android:textColor="@color/colorControls"
+                        android:textColorHighlight="@color/colorControls"
+                        android:textColorHint="@color/colorControls"
+                        android:textColorLink="@color/colorControls"
+                        android:background="@drawable/button_drawable"
+                        android:layout_alignParentTop="false"
+                        android:layout_alignParentEnd="false"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentLeft="false"
+                        android:layout_toRightOf="@+id/monoButton"
+                        android:layout_marginRight="22dp"
+                        android:layout_marginLeft="22dp"
+                        android:foreground="?android:attr/selectableItemBackground" />
+                </RelativeLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentStart="true"
+                        android:gravity="start">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quality"
+                            android:textColor="@color/colorControlsCardBackground"
+                            android:textSize="12sp"
+                            android:shadowColor="@color/colorControlsCardBackground"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Extreme"
+                            android:textColor="@color/colorControls"
+                            android:textSize="16sp"
+                            android:shadowColor="@color/colorControls"
+                            android:id="@+id/audioQualityText" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="end">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Size"
+                            android:textColor="@color/colorControlsCardBackground"
+                            android:textSize="12sp"
+                            android:shadowColor="@color/colorControlsCardBackground" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MB/Min"
+                            android:textColor="@color/colorControls"
+                            android:textSize="16sp"
+                            android:shadowColor="@color/colorControls"
+                            android:id="@+id/audioFileSizePerMinute" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "900591969490",
+    "firebase_url": "https://audio-recorder-c27fc.firebaseio.com",
+    "project_id": "audio-recorder-c27fc",
+    "storage_bucket": "audio-recorder-c27fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900591969490:android:4aa6c53766bbac3a",
+        "android_client_info": {
+          "package_name": "andrei.audiorecorder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900591969490-3usfejs6cssog668jdbund5dfbto15qe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-Mo4pw99SMrx65yaQcr8oWwq7Otwrxxo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

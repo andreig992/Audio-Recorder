@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="andrei.audiorecorder.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:targetApi="lollipop"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"
+        android:layout_below="@+id/my_toolbar"
+        android:fillViewport="true">
+        <LinearLayout
+            android:id="@+id/parentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/emptyImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/startRecording"
+        android:src="@drawable/image"
+        android:tint="@color/colorControls"
+        android:visibility="visible"
+        android:clickable="true" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+        <android.gesture.GestureOverlayView
+            android:id="@+id/gestureDetector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:eventsInterceptionEnabled="true"
+            android:gestureColor="@android:color/transparent"
+            android:gestureStrokeType="multiple"
+            android:clickable="true">
+            <android.support.v7.widget.CardView
+                android:id="@+id/controlsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/colorControlsCardBackground"
+                app:contentPaddingTop="2dp"
+                android:elevation="@dimen/cardview_default_elevation"
+                app:cardCornerRadius="0dp"
+                android:clickable="true">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="false"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingBottom="8dp">
+                        <Chronometer
+                            android:id="@+id/time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/recordedTime"
+                            android:textColor="@color/colorControls"
+                            android:textSize="15sp" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal">
+                            <ImageButton
+                                android:id="@+id/deleteButton"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/delete"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_delete_forever_white_48dp"
+                                android:tint="@color/colorControls"
+                                android:foreground="?android:attr/selectableItemBackground" />
+                            <ImageButton
+                                android:id="@+id/recordPauseBtn"
+                                android:layout_width="130dp"
+                                android:layout_height="70dp"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/record"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_mic_white_48dp"
+                                android:tint="@color/colorControls"
+                                android:filterTouchesWhenObscured="true"
+                                android:foreground="?android:attr/selectableItemBackground" />
+                            <ImageButton
+                                android:id="@+id/saveButton"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:contentDescription="@string/save"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_check_white_48dp"
+                                android:tint="@color/colorControls"
+                                android:foreground="?android:attr/selectableItemBackground" />
+                        </LinearLayout>
+                    </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </android.gesture.GestureOverlayView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/settingsView"
+            android:layout_width="match_parent"
+            android:animateLayoutChanges="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/colorSettingsBackground"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="0dp">
+            <ScrollView
+                android:id="@+id/settingsViewScroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            </ScrollView>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff5252</color>
+    <color name="colorPrimaryDark">#a40f0f</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorRecCardBackground">#FFFFFF</color>
+    <color name="settingsTextColor">#FF5252</color>
+    <color name="colorControlsCardBackground">#FF5252</color>
+    <color name="colorRecControls">#a40f0f</color>
+    <color name="colorControls">#a40f0f</color>
+    <color name="colorSettingsBackground">#ff8f8f</color>
+    <color name="colorCardText">#6b6b6b</color>
+    <color name="colorCardTextLight">#bcbcbc</color>
+    <color name="transparent">#00ffffff</color>
+</resources>

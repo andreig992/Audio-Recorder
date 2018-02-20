@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="?dialogPreferredPadding">
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:text="DEFAULT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton0"
+        android:textColor="@color/colorCardText"
+        android:textColorHighlight="@color/colorControls"
+        android:textColorHint="@color/colorControls"
+        android:textColorLink="@color/colorControls"
+        app:buttonTint="@color/colorControls"
+        android:textSize="16dp"
+        android:padding="?dialogPreferredPadding"
+        android:clickable="true" />
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:text="AAC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton1"
+        android:textColor="@color/colorCardText"
+        android:textColorHighlight="@color/colorControls"
+        android:textColorHint="@color/colorControls"
+        android:textColorLink="@color/colorControls"
+        app:buttonTint="@color/colorControls"
+        android:textSize="16dp"
+        android:padding="?dialogPreferredPadding"
+        android:clickable="true" />
+    <android.support.v7.widget.AppCompatRadioButton
+        android:text="AAC_ELD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton2"
+        android:textColor="@color/colorCardText"
+        android:textColorHighlight="@color/colorControls"
+        android:textColorHint="@color/colorControls"
+        android:textColorLink="@color/colorControls"
+        app:buttonTint="@color/colorControls"
+        android:textSize="16dp"
+        android:padding="?dialogPreferredPadding"
+        android:clickable="true" />
+    <android.support.v7.widget.AppCompatRadioButton
+        android:text="AMR_NB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton3"
+        android:textColor="@color/colorCardText"
+        android:textColorHighlight="@color/colorControls"
+        android:textColorHint="@color/colorControls"
+        android:textColorLink="@color/colorControls"
+        app:buttonTint="@color/colorControls"
+        android:textSize="16dp"
+        android:padding="?dialogPreferredPadding"
+        android:clickable="true" />
+    <android.support.v7.widget.AppCompatRadioButton
+        android:text="AMR_WB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton4"
+        android:textColor="@color/colorCardText"
+        android:textColorHighlight="@color/colorControls"
+        android:textColorHint="@color/colorControls"
+        android:textColorLink="@color/colorControls"
+        app:buttonTint="@color/colorControls"
+        android:textSize="16dp"
+        android:padding="?dialogPreferredPadding"
+        android:clickable="true" />
+    <android.support.v7.widget.AppCompatRadioButton
+        android:text="HE_AAC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton5"
+        android:textColor="@color/colorCardText"
+        android:textColorHighlight="@color/colorControls"
+        android:textColorHint="@color/colorControls"
+        android:textColorLink="@color/colorControls"
+        app:buttonTint="@color/colorControls"
+        android:textSize="16dp"
+        android:padding="?dialogPreferredPadding"
+        android:clickable="true" />
+    <android.support.v7.widget.AppCompatRadioButton
+        android:text="VORBIS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButton6"
+        android:textColor="@color/colorCardText"
+        android:textColorHighlight="@color/colorControls"
+        android:textColorHint="@color/colorControls"
+        android:textColorLink="@color/colorControls"
+        app:buttonTint="@color/colorControls"
+        android:textSize="16dp"
+        android:padding="?dialogPreferredPadding"
+        android:checked="false"
+        android:clickable="true" />
+</LinearLayout>
